@@ -6,7 +6,7 @@
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bb23be5d_002Df1a4_002D43d0_002D985a_002D43340ac5bf11/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PrimitiveTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::617CDE2B-2962-46B3-806A-EAC05D8F1087::.NETCoreApp,Version=v3.1::ConsoleApp1.CalculatorTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::617CDE2B-2962-46B3-806A-EAC05D8F1087::.NETCoreApp,Version=v3.1::ParsingMadeSimple.Test.SimpleParserParserTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::617CDE2B-2962-46B3-806A-EAC05D8F1087::.NETCoreApp,Version=v3.1::PrimitiveCalculator.CalculatorTests.PrecedenceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::617CDE2B-2962-46B3-806A-EAC05D8F1087::.NETCoreApp,Version=v3.1::PrimitiveCalculator.CalculatorTests.NegativeTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

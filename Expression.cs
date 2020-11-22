@@ -162,7 +162,9 @@ namespace PrimitiveCalculator
         {
             var factor = parser.NextIs('-') ? -1 : 1;
             parser.ConsumeAny('+', '-');
-            return factor * double.Parse(parser.ConsumeAny("0.123456789".ToCharArray()), CultureInfo.InvariantCulture);
+            if (!double.TryParse(parser.ConsumeAny("0.123456789".ToCharArray()), NumberStyles.Any, CultureInfo.InvariantCulture, out var result))
+                return double.NaN;
+            return factor * result;
         }
 
         private int Precedence(string op)
@@ -269,6 +271,7 @@ namespace PrimitiveCalculator
             new Expression("1^2+2*3").Eval().Should().Be(7);
             new Expression("1+2^2*3").Eval().Should().Be(13);
             new Expression("1*2*2*3").Eval().Should().Be(12);
+            new Expression("1*2*3*4").Eval().Should().Be(24);
             new Expression("1/2/2").Eval().Should().Be(0.25);
         }
 
@@ -276,6 +279,7 @@ namespace PrimitiveCalculator
         public void NegativeTests()
         {
             new Expression("").Eval().Should().Be(Double.NaN);
+            new Expression("1+").Eval().Should().Be(Double.NaN);
         }
     }
 }
